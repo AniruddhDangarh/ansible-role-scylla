@@ -1,0 +1,17 @@
+---
+#- name: Get Private IP of the current node
+#  set_fact:
+#    scylla_private_ip: "{{ ansible_default_ipv4.address }}"
+
+- name: Configure ScyllaDB
+  template:
+    src: scylla2.yml.j2
+    dest: "{{ scylla_config_path }}"
+    mode: '0644'
+      #  notify: Restart ScyllaDB
+
+- name: Setup ScyllaDB I/O
+  command: /opt/scylladb/scripts/scylla_io_setup
+  args:
+    creates: /var/lib/scylla_setup_completed
+  notify: Start ScyllaDB

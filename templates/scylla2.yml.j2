@@ -1,0 +1,13 @@
+cluster_name: salary_cluster
+listen_address: "{{ ansible_host }}"
+rpc_address: "{{ ansible_host }}"
+rpc_port: 9042  # Native transport port (CQL)
+
+seed_provider:
+  - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+    parameters:
+      - seeds: "{{ ansible_host }}"
+
+authenticator: PasswordAuthenticator
+authorizer: CassandraAuthorizer
+start_native_transport: true

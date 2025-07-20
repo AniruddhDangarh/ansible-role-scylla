@@ -1,0 +1,3 @@
+---
+# vars file for scylla
+scylla_config_path: "/etc/scylla/scylla.yaml"

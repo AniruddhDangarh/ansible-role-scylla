@@ -1,0 +1,13 @@
+# handlers file for scylla
+---
+- name: Restart ScyllaDB
+  systemd:
+    name: scylla-server
+    state: restarted
+    enabled: true
+
+- name: Start ScyllaDB
+  systemd:
+    name: scylla-server
+    state: started
+    enabled: true

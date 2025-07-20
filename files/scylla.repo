@@ -1,0 +1,5 @@
+[scylla]
+name=Scylla for CentOS $releasever - $basearch
+baseurl=https://downloads.scylladb.com/rpm/centos/scylla-5.4.repo
+enabled=1
+gpgcheck=0

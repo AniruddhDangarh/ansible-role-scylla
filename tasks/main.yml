@@ -1,0 +1,15 @@
+---
+# tasks file for scylla
+- name: Install ScyllaDB
+  include_tasks: install.yml
+  tags: install
+
+- name: Configure ScyllaDB
+  include_tasks: config.yml
+  tags: config
+
+
+- name: Setup ScyllaDB Database
+  include_tasks: operation.yml
+  tags: operation
+
