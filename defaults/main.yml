@@ -4,7 +4,7 @@ scylla_config_path: "/etc/scylla/scylla.yaml"
 scylla_version: "6.2"
 scylla_gpg_key: "A43E06657BAC99E3"
 
-ansible_host: "172.31.3.177"
+scylla_db: "172.31.3.177"
 
 scylla_keyspace: "employee_DB"
 scylla_user: "cassandra"
